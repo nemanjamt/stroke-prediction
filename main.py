@@ -71,14 +71,14 @@ def data_analysis(path):
         value=data['bmi'].mean(), inplace=True)
 
     # data.plot(x="bmi", y=["stroke"], kind="pie")
-    data.plot.hist(column=["smoking_status"], by="stroke")
+    data.plot.hist(column=["heart_disease"], by="stroke")
 
     plt.show()
 
 
 def main():
 
-    # data_analysis('healthcare-dataset-stroke-data.csv')
+    data_analysis('healthcare-dataset-stroke-data.csv')
     X_train, y_train, X_valid, y_valid, X_test, y_test = load_data('healthcare-dataset-stroke-data.csv')
     # print("---SVM---")
     # svc = SVC(kernel='rbf')
